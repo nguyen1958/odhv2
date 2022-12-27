@@ -1,0 +1,22 @@
+empl_choix_batch.jsp (+)
+	fr.analogon.r2t.view.batch.BaffRolePrefacturation
+	js : javascript:preFacturation(); | javascript:valider();
+	Post=>empl_prefacturation.jsp
+		fr.analogon.r2t.view.batch.GestionBatch(+)
+	
+	
+	+fr.analogon.r2t.ajax.RechercheAction(+)
+	+fr.analogon.r2t.request.RequestAdmin(+)
+	
+outils_admin.jsp (+)
+	+fr.analogon.r2t.administration.BAffAdministration(+)
+	
+	+web.xml(+)
+	<servlet>
+		<servlet-name>rechercheAction</servlet-name>
+		<servlet-class>fr.analogon.r2t.ajax.RechercheAction</servlet-class>
+	</servlet>    
+	<servlet-mapping>
+		<servlet-name>rechercheAction</servlet-name>
+		<url-pattern>/rechercheAction</url-pattern>
+	</servlet-mapping>
